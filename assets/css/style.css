@@ -1,0 +1,75 @@
+:root {
+    --hue: 48;
+    /*----- LIGHT MODE -----*/
+    --background: linear-gradient(330deg, rgb(calc(var(--hue) - 45), 241, 170), rgb(calc(var(--hue) + 180), 9, 115) 80%);
+    --border: rgb(calc(var(--hue) + 36), 75, 75);
+    --color: rgb(calc(var(--hue) - 18), 20, 10);
+    
+    /*----- DARK MODE -----*/
+    --dark-background: linear-gradient(330deg, rgb(calc(var(--hue) - 48), 128, 122), rgb(calc(var(--hue) + 30), 3, 20) 90%);
+    --dark-border: rgb(calc(var(--hue) - 22), 1, 41);
+    --dark-color: rgb(calc(var(--hue) + 197), 197, 221);
+}
+
+
+/*----- RESET -----*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+    font-size: 62.5%;
+    text-decoration: none;
+    
+}
+
+body {
+    background: var(--background);
+    color: var(--color);
+    height: 100vh;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    
+    font-size: 2rem;
+    font-weight: bold;
+    
+    gap: 1rem;
+    height: calc(100vh - 2rem);
+    
+    justify-content: center;
+    margin: auto;
+
+    text-align: center;
+    width: 50%;
+}
+
+
+#container__btn {
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    
+    color: var(--color);
+    font-weight: bold;
+    height: 4rem;
+
+    margin-inline: auto;
+    width: 20rem;
+}
+
+footer {
+    font-size: 1rem;
+    height: 2rem;
+    
+    margin-bottom: 0;
+    text-align: center;
+}
+
+/*----- DARK MODE -----*/
+.dark-mode,
+#container .dark-mode {
+    background: var(--dark-background);
+    color: var(--dark-color);
+}
